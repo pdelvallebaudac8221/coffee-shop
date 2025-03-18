@@ -1,0 +1,98 @@
+body {
+  color: #2C3E50;
+  background: #FAF4E5;
+  font-family: Kameron;
+  margin: 0;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-header {
+  background: #FAF4E5;
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(100% - 40px);
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1024px;
+  }
+}
+
+.main-header nav ul {
+  display: flex;
+}
+
+.main-header nav a {
+  padding: 10px 10px;
+  font-weight: bold;
+  color: #2C3E50;
+  text-decoration: none;
+}
+
+.section-hero {
+  background: #B06A35;
+  color: white;
+  padding-top: 120px;
+}
+
+.section-hero-banner {
+  text-align: center;
+  max-width: 768px;
+  margin: auto;
+}
+
+.section-hero-banner h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-hero-banner p {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.menu-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.menu-cards li {
+  background: teal;
+  min-height: 400px;
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+}
+
+.menu-cards li h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .menu-cards {
+    flex-direction: row;
+  }
+  .menu-cards li {
+    min-height: 500px;
+  }
+}
