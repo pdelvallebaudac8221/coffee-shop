@@ -1,3 +1,15 @@
-# eleventy-starter v1
+# Coffee Shop Project
 
-A simple eleventy template with Sass.
+Installed required NPM packages:
+
+```
+npm install
+```
+
+Watch files and host locally for development:
+
+```
+npm run dev
+```
+
+Files are compiled into the `_site` folder.
