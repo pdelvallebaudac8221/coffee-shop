@@ -1,0 +1,24 @@
+@use 'abstracts/colors' as *
+
+.section-newsletter
+  background: $linen600
+  color: white
+  padding: 20px
+  
+  .container
+    padding: 20px
+    display: flex
+    gap: 20px
+
+    & > *
+      flex: 1
+
+    form
+      display: flex
+      gap: 5px
+      align-items: flex-end
+
+      .input
+        flex: 1
+      .button-submit
+        min-width: 160px

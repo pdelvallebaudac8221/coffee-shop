@@ -1,0 +1,104 @@
+---
+drinks:
+  - name: "Coffee"
+    price: "$2.00"
+    url: "/images/coffee.jpg"
+  - name: "Espresso"
+    price: "$2.75"
+    url: "/images/espresso.jpg"
+  - name: "Cappuccino"
+    price: "$3.00"
+    url: "/images/cappuccino.jpg"
+  - name: "Latte"
+    price: "$3.00"
+    url: "/images/latte.jpg"
+  - name: "Fountain Pop"
+    price: "$1.75"
+    url: "/images/fountain_pop.jpg"
+  - name: "Juice"
+    price: "$3.00"
+    url: "/images/juice.jpg"
+  
+breakfast:
+  - name: "Sausage and Egger Breakfast Sandwich"
+    price: "$5.00"
+    url: "/images/sausage_egger.jpg"
+  - name: "Bacon and Egger Breakfast Sandwich"
+    price: "$5.00"
+    url: "/images/bacon_egger.jpg"
+  - name: "2 Eggs Over Easy"
+    price: "$6.00"
+    url: "/images/eggs_over_easy.jpg"
+  - name: "Western Omelette"
+    price: "$7.00"
+    url: "/images/western_omelette.jpg"
+  - name: "Eggs Benedict"
+    price: "$11.00"
+    url: "/images/eggs_benedict.jpg"
+  - name: "Veggie Bowl"
+    price: "$11.00"
+    url: "/images/veggie_bowl.jpg"
+
+lunch:
+  - name: "BLT with Fries"
+    price: "$5.00"
+    url: "/images/blt_with_fries.jpg"
+  - name: "Turkey Bacon Clubhouse"
+    price: "$5.00"
+    url: "/images/turkey_bacon_clubhouse.jpg"
+  - name: "Chicken Pesto Grilled Panini"
+    price: "$5.00"
+    url: "/images/chicken_pesto_panini.jpg"
+  - name: "Steak Sandwich"
+    price: "$7.00"
+    url: "/images/steak_sandwich.jpg"
+---
+
+{% include "head.njk" %}
+<div class="menu-header">
+  <h1>Menu</h1>
+</div>
+<div class="menu-content">
+<div class="container container--menu">
+  <h2 class="menu-title">Drinks</h2>
+  <ul class="menu-grid">
+    {% for item in drinks %}
+      <li class="menu-grid__item">
+        <img class="menu-grid__image" src="https://placehold.co/400/EEE/31343C" alt="{{ item.name }}">
+        <div class="menu-grid__product">
+          <h3>{{ item.name }}</h3>
+          <p class="menu-grid__price">{{ item.price }}</p>
+        </div>
+        <button class="menu-grid__add-cart">Add to Cart &plus;</button>
+      </li>
+    {% endfor %}
+  </ul>
+  <h2 class="menu-title">Breakfast</h2>
+  <ul class="menu-grid">
+    {% for item in breakfast %}
+      <li class="menu-grid__item">
+        <img class="menu-grid__image" src="https://placehold.co/400/EEE/31343C" alt="{{ item.name }}">
+        <div class="menu-grid__product">
+          <h3>{{ item.name }}</h3>
+          <p class="menu-grid__price">{{ item.price }}</p>
+        </div>
+        <button class="menu-grid__add-cart">Add to Cart &plus;</button>
+      </li>
+    {% endfor %}
+  </ul>
+  <h2 class="menu-title">Lunch</h2>
+  <ul class="menu-grid">
+    {% for item in lunch %}
+      <li class="menu-grid__item">
+        <img class="menu-grid__image" src="https://placehold.co/400/EEE/31343C" alt="{{ item.name }}">
+        <div class="menu-grid__product">
+          <h3>{{ item.name }}</h3>
+          <p class="menu-grid__price">{{ item.price }}</p>
+        </div>
+        <button class="menu-grid__add-cart">Add to Cart &plus;</button>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+</div>
+{% include "foot.njk" %}

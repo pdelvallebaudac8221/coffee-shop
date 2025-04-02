@@ -1,0 +1,15 @@
+@use 'abstracts/colors' as *
+
+.section-location
+  iframe
+    max-width: 100%
+  .container
+    @media (min-width: 768px)
+      display: flex
+    & > div
+      flex: 1
+  &__info
+    p
+      font-size: 18px
+      line-height: 1.5
+      margin-bottom: 4px

@@ -1,0 +1,103 @@
+// Reset Stylesheet
+@use 'components/reset'
+
+// Variables and Mixins
+@use 'abstracts/colors' as *
+
+// Component Blocks
+@use 'components/form'
+@use 'components/typography'
+
+// Sections
+@use 'sections/location'
+@use 'sections/footer'
+@use 'sections/newsletter'
+
+// Pages
+@use 'pages/menu'
+@use 'pages/about'
+
+*
+  box-sizing: border-box
+
+body
+  color: #2C3E50
+  background: $linen200
+  font-family: Kameron
+  margin: 0
+
+.container
+  max-width: 1180px
+  margin: 0 auto
+  padding: 0 20px
+  &--menu
+    max-width: 960px
+
+.main-header
+  background: $linen200
+  padding: 10px
+  border-radius: 5px
+  width: calc(100% - 40px)
+  margin: auto
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+
+  nav ul
+    display: flex
+  nav a
+    padding: 10px 10px
+    font-weight: bold
+    color: #2C3E50
+    text-decoration: none
+    &:hover
+      color: $linen800
+
+  @media (min-width: 768px)
+    position: absolute
+    top: 20px
+    left: 50%
+    transform: translateX(-50%)
+    width: 100%
+    max-width: 1024px
+
+.section-hero
+  background: $linen800
+  color: white
+  padding-top: 120px
+
+.section-hero-banner
+  text-align: center
+  max-width: 768px
+  margin: auto
+
+  h1
+    font-size: 36px
+    font-weight: bold
+    margin-bottom: 10px
+
+  p
+    font-size: 20px
+    line-height: 1.25
+
+.menu-cards
+  display: flex
+  flex-direction: column
+  gap: 20px
+  margin-top: 20px
+  li
+    background: teal
+    min-height: 400px
+    flex: 1
+    padding: 30px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    border-radius: 20px
+    @media (min-width: 768px)
+       min-height: 500px
+    h2
+      font-size: 20px
+      font-weight: bold
+      margin-bottom: 5px
+
+  @media (min-width: 768px)
+    flex-direction: row

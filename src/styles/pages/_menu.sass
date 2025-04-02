@@ -1,0 +1,68 @@
+@use '../abstracts/colors' as *
+
+.menu-header
+  background: #E7C8B0
+  padding: 20px
+  width: 100%
+  padding-top: 100px
+  display: flex
+  justify-content: center
+  align-items: center
+  h1
+    font-size: 42px
+    font-weight: bold
+    color: #2C3E50
+    text-align: center
+    margin-bottom: 0
+
+.menu-title
+  font-size: 36px
+  font-weight: bold
+  padding-bottom: 8px
+  border-bottom: 3px dotted #2C3E50
+  margin-top: 48px
+  margin-bottom: 16px
+
+.menu-content
+  margin-bottom: 48px
+
+.menu-grid
+  display: grid
+  font-family: "Poppins"
+  gap: 24px
+  @media (min-width: 480px)
+    grid-template-columns: repeat(2, 1fr)
+  @media (min-width: 768px)
+    grid-template-columns: repeat(3, 1fr)
+  &__item
+    background: #E7C8B0
+    padding: 20px
+    border: 2px solid #C69871
+    border-radius: 10px
+  &__image
+    aspect-ratio: 1
+    object-fit: cover
+    width: 100%
+    margin-bottom: 20px
+  &__product
+    display: flex
+    justify-content: space-between
+    gap: 48px
+    font-weight: 500
+  &__price
+    font-size: 20px
+    font-weight: 400
+  &__add-cart
+    display: block
+    font-family: "Poppins"
+    background: #FFECDB
+    border: none
+    padding: 8px 12px
+    border-radius: 5px
+    border: 1px solid #C69871
+    cursor: pointer
+    font-weight: 500
+    margin-top: 16px
+    margin-left: auto
+    &:hover
+      background: #ffd0a6
