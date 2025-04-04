@@ -2,56 +2,56 @@
 drinks:
   - name: "Coffee"
     price: "$2.00"
-    url: "/images/coffee.jpg"
+    url: "/img/coffee.png"
   - name: "Espresso"
     price: "$2.75"
-    url: "/images/espresso.jpg"
+    url: "/img/espresso.png"
   - name: "Cappuccino"
     price: "$3.00"
-    url: "/images/cappuccino.jpg"
+    url: "/img/cappuccino.png"
   - name: "Latte"
     price: "$3.00"
-    url: "/images/latte.jpg"
+    url: "/img/latte.png"
   - name: "Fountain Pop"
     price: "$1.75"
-    url: "/images/fountain_pop.jpg"
+    url: "/img/fountain_pop.png"
   - name: "Juice"
     price: "$3.00"
-    url: "/images/juice.jpg"
+    url: "/img/juice.png"
   
 breakfast:
   - name: "Sausage and Egger Breakfast Sandwich"
     price: "$5.00"
-    url: "/images/sausage_egger.jpg"
+    url: "/img/sausage_egger.png"
   - name: "Bacon and Egger Breakfast Sandwich"
     price: "$5.00"
-    url: "/images/bacon_egger.jpg"
+    url: "/img/bacon_egger.png"
   - name: "2 Eggs Over Easy"
     price: "$6.00"
-    url: "/images/eggs_over_easy.jpg"
+    url: "/img/eggs_over_easy.png"
   - name: "Western Omelette"
     price: "$7.00"
-    url: "/images/western_omelette.jpg"
+    url: "/img/western_omelette.png"
   - name: "Eggs Benedict"
     price: "$11.00"
-    url: "/images/eggs_benedict.jpg"
+    url: "/img/eggs_benedict.png"
   - name: "Veggie Bowl"
     price: "$11.00"
-    url: "/images/veggie_bowl.jpg"
+    url: "/img/veggie_bowl.png"
 
 lunch:
   - name: "BLT with Fries"
     price: "$5.00"
-    url: "/images/blt_with_fries.jpg"
+    url: "/img/blt_with_fries.png"
   - name: "Turkey Bacon Clubhouse"
     price: "$5.00"
-    url: "/images/turkey_bacon_clubhouse.jpg"
+    url: "/img/turkey_bacon_clubhouse.png"
   - name: "Chicken Pesto Grilled Panini"
     price: "$5.00"
-    url: "/images/chicken_pesto_panini.jpg"
+    url: "/img/chicken_pesto_panini.png"
   - name: "Steak Sandwich"
     price: "$7.00"
-    url: "/images/steak_sandwich.jpg"
+    url: "/img/steak_sandwich.png"
 ---
 
 {% include "head.njk" %}
@@ -64,7 +64,7 @@ lunch:
   <ul class="menu-grid">
     {% for item in drinks %}
       <li class="menu-grid__item">
-        <img class="menu-grid__image" src="https://placehold.co/400/EEE/31343C" alt="{{ item.name }}">
+        <img class="menu-grid__image" src="{{item.url}}" alt="{{ item.name }}">
         <div class="menu-grid__product">
           <h3>{{ item.name }}</h3>
           <p class="menu-grid__price">{{ item.price }}</p>
@@ -77,7 +77,7 @@ lunch:
   <ul class="menu-grid">
     {% for item in breakfast %}
       <li class="menu-grid__item">
-        <img class="menu-grid__image" src="https://placehold.co/400/EEE/31343C" alt="{{ item.name }}">
+        <img class="menu-grid__image" src="{{item.url}}" alt="{{ item.name }}">
         <div class="menu-grid__product">
           <h3>{{ item.name }}</h3>
           <p class="menu-grid__price">{{ item.price }}</p>
@@ -90,7 +90,7 @@ lunch:
   <ul class="menu-grid">
     {% for item in lunch %}
       <li class="menu-grid__item">
-        <img class="menu-grid__image" src="https://placehold.co/400/EEE/31343C" alt="{{ item.name }}">
+        <img class="menu-grid__image" src="{{item.url}}" alt="{{ item.name }}">
         <div class="menu-grid__product">
           <h3>{{ item.name }}</h3>
           <p class="menu-grid__price">{{ item.price }}</p>
