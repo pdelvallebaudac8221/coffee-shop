@@ -52,6 +52,9 @@ lunch:
   - name: "Steak Sandwich"
     price: "$7.00"
     url: "/img/steak_sandwich.png"
+  - name: "Veggie Bowl"
+    price: "$7.50"
+    url: "/img/veggie_bowl.png"
 ---
 
 {% include "head.njk" %}
@@ -60,8 +63,9 @@ lunch:
 </div>
 <div class="menu-content">
 <div class="container container--menu">
-  <h2 class="menu-title">Drinks</h2>
-  <ul class="menu-grid">
+  <div class="menu-heading">
+    <h2 class="menu-title">Drinks</h2>
+  </div>  <ul class="menu-grid">
     {% for item in drinks %}
       <li class="menu-grid__item">
         <img class="menu-grid__image" src="{{item.url}}" alt="{{ item.name }}">
@@ -73,7 +77,10 @@ lunch:
       </li>
     {% endfor %}
   </ul>
-  <h2 class="menu-title">Breakfast</h2>
+  <div class="menu-heading">
+    <h2 class="menu-title">Breakfast</h2>
+    <p>Add $3.00 to make it a combo. Consists of a drink and home fries.</p>
+  </div>
   <ul class="menu-grid">
     {% for item in breakfast %}
       <li class="menu-grid__item">
@@ -86,8 +93,10 @@ lunch:
       </li>
     {% endfor %}
   </ul>
-  <h2 class="menu-title">Lunch</h2>
-  <ul class="menu-grid">
+  <div class="menu-heading">
+    <h2 class="menu-title">Lunch</h2>
+    <p>Add $3.00 to make it a combo. Consists of a drink and home fries.</p>
+  </div>  <ul class="menu-grid">
     {% for item in lunch %}
       <li class="menu-grid__item">
         <img class="menu-grid__image" src="{{item.url}}" alt="{{ item.name }}">
