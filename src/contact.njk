@@ -1,0 +1,43 @@
+{% include "head.njk" %}
+<div class="contact-carousel">
+  <div class="contact-carousel__content container">
+    <h1>Find us at</h1>
+    <div>
+      <h3>Location 1</h3>
+      <p>Address: 123 Main St, City, Country</p>
+    </div>
+    <div>
+      <h3>Location 2</h3>
+      <p>Address: 456 Elm St, City, Country</p>
+    </div>
+  </div>
+  <div class="slick-carousel">
+    <img src="/img/about-slider-1.jpg" alt=""/>
+    <img src="/img/about-slider-2.jpg" alt=""/>
+    <img src="/img/about-slider-3.jpg" alt=""/>
+  </div>
+</div>
+<section class="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+      <label for="name" class="input">
+        Name:
+        <input type="text" id="name" name="name" required>
+      </label>
+      <label for="email" class="input">
+        Email:
+        <input type="email" id="email" name="email" required>
+      </label>
+      <label for="message" class="input">
+        Message:
+        <textarea id="message" name="message" required></textarea>
+      </label>
+      <button type="submit" class="button-submit">Submit</button>
+    </form>
+  </div>
+</section>
+<section>
+  
+</section>
+{% include "foot.njk" %}
