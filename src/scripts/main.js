@@ -1,1 +1,8 @@
-console.log('main.js ready!');
+$(document).ready(function(){
+  $('.slick-carousel').slick({
+    autoplay: true,
+    arrows: false,
+    easing: 'ease-out',
+    autoplaySpeed: 5000,
+  });
+});
