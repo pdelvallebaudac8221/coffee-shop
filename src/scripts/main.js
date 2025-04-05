@@ -6,4 +6,8 @@ $(document).ready(function(){
     autoplaySpeed: 2500,
     pauseOnHover: false,
   });
+
+  const cart = localStorage.getItem('cart');
+  console.log(window.location.href.includes('/menu'));
+
 });
