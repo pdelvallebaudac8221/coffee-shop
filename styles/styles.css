@@ -53,15 +53,20 @@ table {
   flex-direction: column;
   gap: 5px;
 }
-.input input {
-  height: 40px;
+.input input, .input textarea {
+  height: 44px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #EBCB98;
+  font-size: 14px;
+  font-family: Poppins, sans-serif;
+}
+.input textarea {
+  height: 160px;
 }
 
 .button-submit {
-  height: 40px;
+  height: 44px;
   background-color: #AB5A21;
   color: white;
   padding: 10px;
@@ -70,7 +75,7 @@ table {
   cursor: pointer;
 }
 .button-submit:hover {
-  background-color: #DC964B;
+  background-color: #844019;
 }
 
 .section-title {
@@ -116,6 +121,11 @@ table {
   display: flex;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .section-newsletter .container {
+    flex-direction: column;
+  }
+}
 .section-newsletter .container > * {
   flex: 1;
 }
@@ -124,8 +134,14 @@ table {
   gap: 5px;
   align-items: flex-end;
 }
+@media (max-width: 768px) {
+  .section-newsletter .container form {
+    flex-direction: column;
+  }
+}
 .section-newsletter .container form .input {
   flex: 1;
+  width: 100%;
 }
 .section-newsletter .container form .button-submit {
   min-width: 160px;
@@ -135,10 +151,15 @@ table {
   background: #E7C8B0;
   padding: 20px;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .menu-header {
+    padding-top: 40px;
+  }
 }
 .menu-header h1 {
   font-size: 42px;
@@ -148,13 +169,23 @@ table {
   margin-bottom: 0;
 }
 
-.menu-title {
-  font-size: 36px;
-  font-weight: bold;
+.menu-heading {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 8px;
   border-bottom: 3px dotted #2C3E50;
   margin-top: 48px;
   margin-bottom: 16px;
+}
+.menu-heading p {
+  max-width: 300px;
+  font-style: italic;
+  text-align: right;
+}
+
+.menu-title {
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .menu-content {
@@ -182,11 +213,16 @@ table {
   border: 2px solid #C69871;
   border-radius: 10px;
 }
+.menu-grid__item:hover .menu-grid__image {
+  transform: scale(1.05);
+  filter: brightness(105%);
+}
 .menu-grid__image {
   aspect-ratio: 1;
   object-fit: cover;
   width: 100%;
   margin-bottom: 20px;
+  transition: 100ms ease-out all;
 }
 .menu-grid__product {
   display: flex;
@@ -238,6 +274,43 @@ table {
   margin-bottom: 20px;
 }
 
+.contact-carousel {
+  position: relative;
+}
+.contact-carousel__content {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 100%;
+}
+.contact-carousel .slick-carousel img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.contact-form {
+  padding: 50px 0;
+  max-width: 720px;
+  margin: auto;
+}
+.contact-form form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form .button-submit {
+  width: 100%;
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -260,11 +333,15 @@ body {
 
 .main-header {
   background: #FAF4E5;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   width: calc(100% - 40px);
   margin: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
 }
 .main-header nav ul {
   display: flex;
@@ -277,6 +354,12 @@ body {
 }
 .main-header nav a:hover {
   color: #AB5A21;
+}
+@media (max-width: 500px) {
+  .main-header {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 @media (min-width: 768px) {
   .main-header {
@@ -292,7 +375,13 @@ body {
 .section-hero {
   background: #AB5A21;
   color: white;
-  padding-top: 120px;
+  padding-top: 160px;
+  padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .section-hero {
+    padding-top: 80px;
+  }
 }
 
 .section-hero-banner {
@@ -340,4 +429,21 @@ body {
   .menu-cards {
     flex-direction: row;
   }
+}
+
+.section-footer {
+  color: white;
+  padding: 20px 0;
+}
+.section-footer .footer-links {
+  display: flex;
+  gap: 20px;
+}
+.section-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+.section-footer a {
+  color: inherit;
+  text-decoration: none;
 }
