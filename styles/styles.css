@@ -286,6 +286,19 @@ table {
   color: white;
   width: 100%;
 }
+.contact-carousel__content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.contact-carousel__content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contact-carousel__content p {
+  margin-bottom: 20px;
+}
 .contact-carousel .slick-carousel img {
   height: 500px;
   object-fit: cover;
